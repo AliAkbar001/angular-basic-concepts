@@ -1,1 +1,15 @@
-<p>login works!</p>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <div class="fadeIn first">
+        <h1 class="p-20">Login</h1>
+      </div>
+      <form (ngSubmit)="login()">
+        <input type="text" [(ngModel)]="username" id="login" class="fadeIn second" name="login" placeholder="login">
+        <input type="password" [(ngModel)]="password" id="password" class="fadeIn third" name="login" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+      <div>
+          <h6 class="text-danger">{{errorMsg}}</h6>
+      </div>
+    </div>
+  </div>
