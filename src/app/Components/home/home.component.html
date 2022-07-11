@@ -1,18 +1,13 @@
 <app-header></app-header>
 <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <h5>Trending Movies</h5>
-        <div *ngFor="let movie of trendingMovies">
-            <div class="row">
+    <div>
+        <h5 class="my-3 text-center">Trending Movies</h5>
+        <div class="d-flex flex-wrap flex-row">
+            <div class="w-25 my-3 text-center" *ngFor="let movie of trendingMovies">
                 <img [src]="movie.cover">
                 <div>{{movie.name}}</div>
                 <div>{{movie.rating}}</div>
             </div>
-          </div>
-      </div>
-      <div class="col-sm">
-        One of three columns
-      </div>
+        </div>
     </div>
   </div>
