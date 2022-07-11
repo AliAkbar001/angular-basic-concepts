@@ -1,1 +1,18 @@
 <app-header></app-header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h5>Trending Movies</h5>
+        <div *ngFor="let movie of trendingMovies">
+            <div class="row">
+                <img [src]="movie.cover">
+                <div>{{movie.name}}</div>
+                <div>{{movie.rating}}</div>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div>
