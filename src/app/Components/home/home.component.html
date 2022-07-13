@@ -4,7 +4,7 @@
         <h5 class="my-3 text-center">Trending Movies</h5>
         <div class="d-flex flex-wrap flex-row">
             <div class="w-25 my-3 text-center" *ngFor="let movie of trendingMovies">
-                <img [src]="movie.cover">
+                <img [src]="movie.cover" (click)="goToMovie(movie.id, 'trending')">
                 <div>{{movie.name}}</div>
                 <div>{{movie.rating}}</div>
                 <app-star-rating [rating] = "movie.rating" [isReadOnly]="true"></app-star-rating>
@@ -15,7 +15,7 @@
         <h5 class="my-3 text-center">Popular in Theatres</h5>
         <div class="d-flex flex-wrap flex-row">
             <div class="w-25 my-3 text-center" *ngFor="let movie of theatreMovies">
-                <img [src]="movie.cover">
+                <img [src]="movie.cover" (click)="goToMovie(movie.id, 'theater')">
                 <div>{{movie.name}}</div>
                 <div>{{movie.rating}}</div>
                 <app-star-rating [rating] = "movie.rating" [isReadOnly]="true"></app-star-rating>
@@ -26,7 +26,7 @@
         <h5 class="my-3 text-center">Popular Movies</h5>
         <div class="d-flex flex-wrap flex-row">
             <div class="w-25 my-3 text-center" *ngFor="let movie of popularMovies">
-                <img [src]="movie.cover">
+                <img [src]="movie.cover" (click)="goToMovie(movie.id, 'popular')">
                 <div>{{movie.name}}</div>
                 <div>{{movie.rating}}</div>
                 <app-star-rating [rating] = "movie.rating" [isReadOnly]="true"></app-star-rating>
